@@ -1,0 +1,94 @@
+.newsletter {
+    background:var(--color-primary);
+    padding:var(--space-double) 0;
+    color:var(--color-base);
+}
+
+.newsleterFlex {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsleterFlex div {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter h3 {
+    font-size:1.875rem;
+    color: var(--color-base);
+    font-weight:var(--weight-extrabold);
+}
+
+.newsletter h4 {
+    color: var(--color-base);
+    font-weight: var(--weight-light);
+    font-size:1.125rem;
+    margin-top:4px;
+    margin-left:var(--space-half);
+}
+
+.newsletterForm {
+    background:blue;
+}
+
+footer.footer {
+    background:url(/images/footer-bg.webp) center center;
+    background-size:cover;
+}
+
+footer.footer .footerMain {
+    text-align:center;
+    padding:var(--space-quad) 0;
+}
+
+
+
+h2.title {
+    font-size:var(--font-size-xxlarge);
+    color:var(--color-base);
+    font-weight:var(--weight-light);
+}
+
+h3.description {
+    font-size: var(--font-size-base);
+    color:var(--color-base-alt);
+    font-weight: var(--weight-light);
+}
+
+.button button:hover {
+    background:var(--color-base);
+    color:var(--color-heading);
+}
+
+.button button:hover svg {
+    fill: var(--color-heading);
+}
+
+.copyright {
+    color:var(--color-mid);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size:0.9rem;
+    padding: 2.2rem;
+    display:flex;
+    align-items: center;
+    text-align:center;
+}
+
+.copyright a {
+    color:var(--color-base);
+}
+
+.copyright a:hover {
+    opacity:0.75;
+}
+
+span.divider {
+    display: inline-block;
+    margin:0 15px;
+    width:1px;
+    opacity: 1;
+    height:.7rem;
+    background:rgba(255, 255, 255, 0.15);
+}

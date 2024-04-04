@@ -1,0 +1,41 @@
+:root {
+    /* Colorbook */
+    --color-primary: #ef3a24;
+    --color-heading: #282828;
+    --color-main: #6e6e6f;
+    --color-base: #ffffff;
+    --color-base-alt: #cecece;
+    --color-mid: #aaa;
+
+    /* Font Sizes */
+    --font-size-xsmall: .75rem;
+    --font-size-small: .875rem;
+    --font-size-base:1rem;
+    --font-size-medium: 1.15rem;
+    --font-size-large: 1.25rem;
+    --font-size-xlarge: 1.35rem;
+    --font-size-xxlarge: 2.5rem;
+    --font-size-xxxlarge: 2.8rem;
+
+    /* Spacing */
+    --space-gutter: 1.25rem;
+    --space-eighth: 0.2rem;
+    --space-quarter: 0.4rem;
+    --space-half: 0.8rem;
+    --space-default: 1.6rem;
+    --space-double: 3rem;
+    --space-quad: 5rem;
+    --space-oct: 12.8rem;
+    
+    /* Font Weights */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-semibold: 500;
+    --weight-bold: 600;
+    --weight-extrabold: 700;
+
+    /* Design elements */
+    --transition: 300ms ease-in-out;
+    --border-radius-default: 0.4rem;
+    --border-radius-large: 0.8rem;
+}

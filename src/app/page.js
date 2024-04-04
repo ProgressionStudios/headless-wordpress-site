@@ -1,95 +1,49 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { getSinglePage } from "../lib/pages";
+import parse from 'html-react-parser';
+import seoStringParser from "../lib/seoStringParser";
+import styles from "../styles/pages/page.module.css";
 
-export default function Home() {
+export default async function Home() {
+  const pageData = await getSinglePage('home');
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+          <h1 className="text-6xl text-center text-slate-700 relative py-8">
+                        {pageData.title}
+                    </h1>
+        <div dangerouslySetInnerHTML={{ __html: pageData.content }} className="post-content container mx-auto lg:max-w-4xl" />
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
   );
+}
+
+export async function generateMetadata() {
+  const pageData = await getSinglePage('home');
+
+  return {
+    title: pageData.seo.title,
+    description: pageData.seo.metaDesc,
+    alternates: {
+      canonical: parse(seoStringParser(pageData.seo.canonical)), // Added missing closing parenthesis here
+    },
+    openGraph: {
+      title: pageData.seo.opengraphTitle,
+      description: pageData.seo.opengraphDescription,
+      url: parse(seoStringParser(pageData.seo.opengraphUrl)),
+      siteName: pageData.seo.opengraphSiteName,
+      locale: 'en_US',
+      type: 'website',
+    },
+    icons: {
+      icon: '/fav.webp',
+    },
+    twitter: {
+      title: pageData.seo.title,
+      description: pageData.seo.metaDesc,
+      creator: 'progression_S'
+    }
+  }
 }
