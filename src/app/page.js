@@ -1,6 +1,7 @@
 import { getSinglePage } from "../lib/pages";
 import parse from 'html-react-parser';
 import seoStringParser from "../lib/seoStringParser";
+
 import styles from "../styles/pages/page.module.css";
 
 export default async function Home() {
@@ -21,28 +22,28 @@ export default async function Home() {
 }
 
 export async function generateMetadata() {
-  const pageData = await getSinglePage('home');
+  const seoData = await getSinglePage('home');
 
   return {
-    title: pageData.seo.title,
-    description: pageData.seo.metaDesc,
+    title: seoData.seo.title,
+    description: seoData.seo.metaDesc,
     alternates: {
-      canonical: parse(seoStringParser(pageData.seo.canonical)), // Added missing closing parenthesis here
+      canonical: parse(seoStringParser(seoData.seo.canonical)), // Added missing closing parenthesis here
     },
     openGraph: {
-      title: pageData.seo.opengraphTitle,
-      description: pageData.seo.opengraphDescription,
-      url: parse(seoStringParser(pageData.seo.opengraphUrl)),
-      siteName: pageData.seo.opengraphSiteName,
+      title: seoData.seo.opengraphTitle,
+      description: seoData.seo.opengraphDescription,
+      url: parse(seoStringParser(seoData.seo.opengraphUrl)),
+      siteName: seoData.seo.opengraphSiteName,
       locale: 'en_US',
       type: 'website',
     },
     icons: {
-      icon: '/fav.webp',
+      icon: './fav.webp',
     },
     twitter: {
-      title: pageData.seo.title,
-      description: pageData.seo.metaDesc,
+      title: seoData.seo.title,
+      description: seoData.seo.metaDesc,
       creator: 'progression_S'
     }
   }

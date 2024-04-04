@@ -6,6 +6,8 @@ export async function getPageSlugs() {
             pages {
               nodes {
                 slug
+                link
+                modified
               }
             }
           }`
@@ -15,6 +17,25 @@ export async function getPageSlugs() {
     const slugs = resJson.data.pages.nodes;
     return slugs;
 }
+
+export async function getPagesList() {
+  const query = {
+    query: `query getAllPages {
+            pages(first: 10000) {
+              nodes {
+                slug
+                link
+                modified
+              }
+            }
+          }`
+  };
+
+  const resJson = await graphqlRequest(query);
+  const pages = resJson.data.pages.nodes;
+  return pages;
+}
+
 
 export async function getSinglePage(slug) {
     const query = {
@@ -34,6 +55,7 @@ export async function getSinglePage(slug) {
                   opengraphDescription
                   opengraphSiteName
                   opengraphUrl
+                  opengraphType
                 }
               }
             }
