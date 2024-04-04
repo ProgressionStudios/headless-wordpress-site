@@ -1,4 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    output: 'export',
+
+    // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
+    // trailingSlash: true,
+
+    // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
+    // skipTrailingSlashRedirect: true,
+
+    //basePath: '/out', image path needs to be updated too!
+
+    //Image optimization must be disabled for static generated files
+    images: { unoptimized: true },
+
+
+}
 
 export default nextConfig;
