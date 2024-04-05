@@ -14,6 +14,7 @@ const poppins = localFont({
     {
       path: '../styles/font/Poppins-400.woff2',
       weight: '400',
+      style: 'normal',
     },
     {
       path: '../styles/font/Poppins-500.woff2',
@@ -23,12 +24,12 @@ const poppins = localFont({
     {
       path: '../styles/font/Poppins-600.woff2',
       weight: '600',
-      style: 'italic',
+      style: 'normal',
     },
     {
       path: '../styles/font/Poppins-700.woff2',
       weight: '700',
-      style: 'italic',
+      style: 'normal',
     }
   ],
 });
