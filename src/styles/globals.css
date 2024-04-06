@@ -12,7 +12,7 @@
 }
 
 body {
-  background: var(--color-base);
+  background: var(--color-body);
   color: var(--color-main);
   font-size: var(--font-size-base);
   line-height: 1.6;
@@ -51,11 +51,11 @@ h5 {
 }
 
 h4 {
-  font-size: var(--font-size-xlarge);
+  font-size: var(--font-size-medium);
 }
 
 h3 {
-  font-size: var(--font-size-xlarge);
+  font-size: var(--font-size-large);
 }
 
 h2 {
@@ -70,7 +70,7 @@ h1 {
 
 .container {
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 80rem;
   padding: 0 var(--space-gutter);
 }
 
