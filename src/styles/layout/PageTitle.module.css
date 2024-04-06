@@ -1,0 +1,39 @@
+.titleContainer {
+    background: var(--color-main) url(/images/page-title.webp) center center;
+    background-size: cover;
+    text-align:center;
+}
+
+.titleText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .titleText {
+        height: 420px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .titleText {
+        height: 360px;
+    }
+}
+
+h1.title {
+    color: var(--color-base);
+    font-weight:var(--weight-extrabold);
+    margin-top:4.1rem;
+    margin-bottom:var(--space-half);
+    font-size: clamp(2.8rem, 1.4562rem + 4.3vw, 3.875rem);
+}
+
+h2.subTitle {
+    color: var(--color-base);
+    font-weight:var(--weight-semibold);
+    font-size: clamp(0.95rem, 0.6525rem + 0.952vw, 1.188rem);
+}

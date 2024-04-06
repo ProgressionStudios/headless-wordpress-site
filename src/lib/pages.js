@@ -47,6 +47,7 @@ export async function getSinglePage(slug) {
                 modified
                 slug
                 title(format: RENDERED)
+                progressionStudiosSubTitle
                 seo {
                   title
                   metaDesc

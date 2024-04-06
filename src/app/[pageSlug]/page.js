@@ -1,6 +1,7 @@
 import parse from 'html-react-parser';
 import seoStringParser from "../../lib/seoStringParser";
 import { getPageSlugs, getSinglePage } from "../../lib/pages";
+import PageTitle from "../../components/PageTitle";
 
 import styles from "../../styles/pages/page.module.css";
 
@@ -22,13 +23,11 @@ export default async function Page({ params }) {
     const pageData = await getSinglePage(params.pageSlug);
 
     return (
-        <main className={styles.main}>
+        <main className={styles.globalMain}>
+            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} />
             
             <section className="content-area py-8">
                 <article>
-                    <h1 className="text-6xl text-center text-slate-700 relative py-8">
-                        {pageData.title}
-                    </h1>
                     <div dangerouslySetInnerHTML={{ __html: pageData.content }} className="post-content container mx-auto lg:max-w-4xl" />
                 </article>
             </section>
