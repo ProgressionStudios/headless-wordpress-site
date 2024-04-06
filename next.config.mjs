@@ -8,7 +8,7 @@ const nextConfig = {
     // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
     // skipTrailingSlashRedirect: true,
 
-    //basePath: '/out', image path needs to be updated too!
+    //basePath: '/out',
 
     //Image optimization must be disabled for static generated files
     images: { unoptimized: true },
