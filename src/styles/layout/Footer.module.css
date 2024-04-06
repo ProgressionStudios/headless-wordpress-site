@@ -43,27 +43,31 @@ footer.footer .footerMain {
     padding:var(--space-quad) 0;
 }
 
-
-
 h2.title {
     font-size:var(--font-size-xxlarge);
     color:var(--color-base);
     font-weight:var(--weight-light);
+    margin-bottom:var(--space-gutter);
 }
 
 h3.description {
     font-size: var(--font-size-base);
     color:var(--color-base-alt);
     font-weight: var(--weight-light);
+    margin-bottom: calc(var(--space-default) + .6rem);
 }
 
-.button button:hover {
-    background:var(--color-base);
-    color:var(--color-heading);
+.footerBtn {
+    display:inline-block;
 }
 
-.button button:hover svg {
-    fill: var(--color-heading);
+.footerBtn a:hover {
+    background:var(--color-base) !important;
+    color:var(--color-heading) !important;
+}
+
+.footerBtn a:hover svg {
+    fill: var(--color-heading) !important;
 }
 
 .copyright {
@@ -76,8 +80,9 @@ h3.description {
     text-align:center;
 }
 
-.copyright a {
+.copyright a.footerlink {
     color:var(--color-base);
+    transition: var(--transition);
 }
 
 .copyright a:hover {
