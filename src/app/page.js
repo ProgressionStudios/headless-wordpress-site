@@ -2,7 +2,7 @@ import { getSinglePage } from "../lib/pages";
 import parse from 'html-react-parser';
 import seoStringParser from "../lib/seoStringParser";
 import { getThemesList } from "../lib/themes";
-import ThemeList from "../lib/ThemeList";
+import ThemeList from "../components/ThemeList";
 
 import styles from "../styles/pages/page.module.css";
 
@@ -25,16 +25,9 @@ export default async function Home() {
         </video>
         <div className={styles.heroOverlay}></div>
       </div>
-
-      <div className={styles.description}>
-          <h1 className="text-6xl text-center text-slate-700 relative py-8">
-                        {pageData.title}
-                    </h1>
-        <div dangerouslySetInnerHTML={{ __html: pageData.content }} className="post-content container mx-auto lg:max-w-4xl" />
-        <div>
-        </div>
+      <div className="container">
+        <ThemeList initialPosts={initialPosts} count={3} />
       </div>
-      <ThemeList initialPosts={initialPosts} count={3} />
     </main>
   );
 }

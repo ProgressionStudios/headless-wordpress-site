@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import seoStringParser from "../../lib/seoStringParser";
 import PageTitle from "../../components/PageTitle";
 import { getThemesList } from "../../lib/themes";
-import ThemeList from "../../lib/ThemeList";
+import ThemeList from "../../components/ThemeList";
 
 import styles from "../../styles/pages/page.module.css";
 
