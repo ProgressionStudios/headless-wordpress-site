@@ -26,7 +26,7 @@ const Header = () => {
                         <li><Link href="/freebies" className={pathname == "/freebies" ? styles.current : ""}>Freebies</Link></li>
                         <li><Link href="/tutorials" className={pathname == "/tutorials" ? styles.current : ""}>Tutorials</Link></li>
                         <li><Link href="/contact-us" className={pathname == "/contact-us" ? styles.current : ""}>Contact</Link></li>
-
+                        <li><Link href="/blog" className={pathname == "/contact-us" ? styles.current : ""}>Blog</Link></li>
                     </ul>
                 </nav>
                 <div className={styles.social}>

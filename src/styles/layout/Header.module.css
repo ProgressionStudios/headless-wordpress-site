@@ -1,7 +1,7 @@
 header.header {
     border-bottom:1px solid rgba(255, 255, 255, 0.15);
     line-height:1;
-    /*position:absolute;*/background: #000;
+    position:absolute;
     width:100%;
     z-index:10;
 }
@@ -28,7 +28,7 @@ nav.main li a {
     text-transform:uppercase;
     display:inline-block;
     color:var(--color-base);
-    font-weight:var(--weight-semibold);
+    font-weight:var(--weight-bold);
     font-size:.813rem;
     padding: 33px 22px;
     letter-spacing: 0.5px;
