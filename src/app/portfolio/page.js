@@ -13,7 +13,7 @@ export default async function Page() {
 
     return (
         <main className={styles.globalMain}>
-            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} />
+            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             <div className="container">
                 <ThemeList initialPosts={initialPosts} count={99} />
             </div>

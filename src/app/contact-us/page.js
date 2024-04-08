@@ -12,7 +12,7 @@ export default async function Page() {
 
     return (
         <main className={styles.globalMain}>
-            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} />
+            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             <div className="container">
                 <h2>Contact form here</h2>
                 <FormValidation />

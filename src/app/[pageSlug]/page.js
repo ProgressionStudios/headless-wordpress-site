@@ -24,7 +24,7 @@ export default async function Page({ params }) {
 
     return (
         <main className={styles.globalMain}>
-            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} />
+            <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             
             <section className="content-area py-8">
                 <article>

@@ -47,6 +47,11 @@ export async function getSinglePage(slug) {
                 modified
                 slug
                 title(format: RENDERED)
+                featuredImage {
+                  node {
+                    mediaItemUrl
+                  }
+                }
                 progressionStudiosSubTitle
                 seo {
                   title
