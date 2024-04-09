@@ -8,6 +8,7 @@
     --color-base: #ffffff;
     --color-base-alt: #cecece;
     --color-mid: #aaa;
+    --color-light-grey:#e0e0e0;
 
     /* Font Sizes */
     --font-size-xsmall: .75rem;
@@ -26,8 +27,8 @@
     --space-half: 0.8rem;
     --space-default: 1.6rem;
     --space-double: 3rem;
-    --space-quad: 5rem;
-    --space-oct: 12.8rem;
+    --space-quad: 4.375rem;
+    --space-oct: 5.5rem;
     
     /* Font Weights */
     --weight-light: 300;

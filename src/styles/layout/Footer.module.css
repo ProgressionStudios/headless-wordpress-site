@@ -41,7 +41,7 @@ footer.footer {
 
 footer.footer .footerMain {
     text-align:center;
-    padding:var(--space-quad) 0;
+    padding:var(--space-oct) 0;
 }
 
 h2.title {

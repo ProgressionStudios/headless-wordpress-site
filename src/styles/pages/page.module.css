@@ -60,3 +60,51 @@ h2.heroSubtitle {
     font-size: clamp(1.1rem, 0.7563rem + 1.1vw, 1.375rem);
     padding-bottom: calc(var(--space-gutter) + 0.25rem);
 }
+
+.eliteSection {
+    background:var(--color-heading) url(/images/highlight-bg.webp);
+    background-size:cover;
+    padding:7rem 0;
+    margin-top:var(--space-quad);
+}
+
+.eliteGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .eliteSection img {
+        margin-bottom: var(--space-double);
+    }
+    .eliteGrid {
+        flex-direction:column;
+        text-align:center;
+    }
+    .eliteSection {
+        padding:5rem 0;
+    }
+}
+
+.eliteSection h2 {
+    color:var(--color-base);
+    font-size: clamp(1.875rem, 0.9375rem + 3vw, 2.625rem);
+    margin-bottom:var(--space-half);
+}
+
+.eliteSection h3 {
+    color: var(--color-base-alt);
+    font-weight:var(--weight-light);
+    font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+}
+
+.eliteSection h3 strong{
+    font-weight: var(--weight-bold);
+}
+
+.eliteSection img {
+    width:110px;
+    margin-right:var(--space-double);
+}
