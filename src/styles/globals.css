@@ -183,3 +183,41 @@ a.button:hover svg {
 header.expanded .menubtn {
   background: red;
 }
+
+.error-page-container {
+  text-align:center;
+  max-width:680px;
+  margin:auto;
+}
+
+.error-page-container h6 {
+  color: var(--color-sub-heading);
+  margin-bottom:var(--space-half);
+  font-size:var(--font-size-base);
+  text-transform:uppercase;
+}
+
+.container-flex {
+  display:flex;
+}
+
+.content-with-sidebar {
+  margin-right:40px;
+}
+
+.sidebar-container {
+  width:350px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  .content-with-sidebar {
+      margin-right: 0;
+    }
+  
+  .sidebar-container {
+    width: 100%;
+  }
+}
