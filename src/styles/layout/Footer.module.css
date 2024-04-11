@@ -30,10 +30,6 @@
     margin-left:var(--space-half);
 }
 
-.newsletterForm {
-    background:blue;
-}
-
 footer.footer {
     background:url(/images/footer-bg.webp) center center;
     background-size:cover;

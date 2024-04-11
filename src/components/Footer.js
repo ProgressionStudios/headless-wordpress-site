@@ -14,7 +14,7 @@ function Footer() {
                             <h4>Get notified when new themes are released!</h4>
                         </div>
                         <div className={styles.newsletterForm}>
-                            Newsletter goes here SubscribePage
+                            
                         </div>
                     </div>
                 </div>
