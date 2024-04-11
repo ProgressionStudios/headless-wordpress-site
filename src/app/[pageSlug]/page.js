@@ -28,7 +28,7 @@ export default async function Page({ params }) {
             
             <section className="content-area py-8">
                 <article>
-                    <div dangerouslySetInnerHTML={{ __html: pageData.content }} className="post-content container mx-auto lg:max-w-4xl" />
+                    <div dangerouslySetInnerHTML={{ __html: pageData.content }} />
                 </article>
             </section>
         </main>

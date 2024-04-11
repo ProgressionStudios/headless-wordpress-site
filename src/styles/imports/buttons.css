@@ -17,6 +17,7 @@
 a.button:visited,
 a.button:active,
 a.button {
+    display:inline-block;
     cursor: pointer;
     border: none;
     line-height: 1;
@@ -27,9 +28,7 @@ a.button {
     vertical-align: middle;
     color: var(--color-base);
     background: var(--color-primary);
-    display: flex;
     margin: 0 auto;
-    align-items: center;
     transition: var(--transition);
 }
 
@@ -39,6 +38,7 @@ a.button svg {
     width: 14px;
     margin-left: var(--space-quarter);
     transition: var(--transition);
+    vertical-align:middle;
 }
 
 a.button:hover {

@@ -1,0 +1,20 @@
+.sidebarItem {
+    background:var(--color-base);
+    padding:var(--space-default);
+    box-shadow: 5px 5px 15px rgba(0,0,0, 0.025);
+    border-radius:6px;
+    margin-bottom:40px;
+}
+
+.sidebarItem h2 {
+    font-size:var(--font-size-medium);
+    margin-bottom:var(--space-half);
+}
+
+.advertisement {
+    margin-bottom:40px;
+}
+
+.advertisement img {
+    border-radius:6px;
+}

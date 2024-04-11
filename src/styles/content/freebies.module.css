@@ -1,0 +1,47 @@
+.freebiesCard {
+    display:flex;
+    background:var(--color-base);
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.freebiesIMG {
+    width:50%;
+}
+
+.freebiesText {
+    width:50%;
+    padding:var(--space-default);
+    align-content:center;
+}
+
+.freebiesText h2 {
+    margin-bottom: var(--space-quarter);
+}
+
+.freebiesText h3 {
+    padding-bottom: var(--space-gutter);
+    margin-bottom: var(--space-gutter);
+    color:var(--color-sub-heading);
+    font-weight:var(--weight-semibold);
+    font-size:var(--font-size-small);
+    border-bottom:1px solid var(--color-light-grey);
+}
+
+.content {
+    font-size: var(--font-size-small);
+    padding-bottom: var(--space-default);
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .freebiesCard {
+        flex-direction: column;
+    }
+    .freebiesIMG {
+        width: 100%;
+    }
+
+    .freebiesText {
+        width: 100%;
+    }
+}

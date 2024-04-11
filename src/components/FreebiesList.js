@@ -9,9 +9,7 @@ export default function FreebiesList({ initialPosts, count }) {
     const [posts] = useState(initialPosts);
 
     return (
-        <main className="container-flex">
-            <section className="content-with-sidebar">
-                <div className={styles.freebiesContainer}>
+        <div className={styles.freebiesContainer}>
                     {
                         posts.nodes.slice(0, count).map((post) => (
                             <div key={post.slug} className={styles.tutorialsListItem}>
@@ -38,11 +36,6 @@ export default function FreebiesList({ initialPosts, count }) {
                     }
                 </div>
 
-            </section>
-            <section className="sidebar-container">
-                    <h2>Sidebar</h2>
-            </section>
-        </main>
     )
 
 

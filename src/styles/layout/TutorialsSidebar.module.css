@@ -1,0 +1,32 @@
+ul.tutorialsContainer {
+    margin:0;
+    list-style: none;
+}
+
+ul.tutorialsContainer li {
+    font-size:var(--font-size-small);
+    margin-bottom:var(--space-quarter);
+    padding-left:22px;
+    position:relative;
+}
+
+ul.tutorialsContainer li:before {
+    content:url(/icons/newspaper-solid.svg);
+    width:12px;
+    position:absolute;
+    left:0;
+    top:1px;
+    opacity:0.4;
+}
+
+ul.tutorialsContainer li:last-child {
+    margin-bottom:0;
+}
+
+ul.tutorialsContainer li a {
+    color:var(--color-main);
+}
+
+ul.tutorialsContainer li a:hover {
+    color: var(--color-primary);
+}

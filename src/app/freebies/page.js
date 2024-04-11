@@ -4,6 +4,7 @@ import seoStringParser from "../../lib/utilities/seoStringParser";
 import PageTitle from "../../components/PageTitle";
 import { getFreebiesList } from "../../lib/freebies";
 import FreebiesList from "../../components/FreebiesList";
+import Sidebar from "../../components/Sidebar";
 
 import styles from "../../styles/content/page.module.css";
 
@@ -15,7 +16,13 @@ export default async function Page() {
         <main className={styles.globalMain}>
             <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             <div className="container">
-                <FreebiesList initialPosts={initialPosts} count={99} />
+                <main className="container-flex">
+                    <section className="content-with-sidebar">
+                        <FreebiesList initialPosts={initialPosts} count={99} />
+                    </section>
+                    <Sidebar />
+                </main>
+
             </div>
         </main>
     );

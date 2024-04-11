@@ -1,22 +1,22 @@
 'use client';
 import { useState } from "react";
 
-import styles from '../styles/content/TutorialsList.module.css';
+import styles from '../styles/layout/TutorialsSidebar.module.css';
 
-export default function TutorialsList({ initialPosts, count }) {
+export default function TutorialsSidebar({ initialPosts, count }) {
 
     const [posts] = useState(initialPosts);
 
     return (
-        <div className={styles.tutorialsContainer}>
+        <ul className={styles.tutorialsContainer}>
             {
                 posts.nodes.slice(0, count).map((post) => (
                     <li key={post.slug} className={styles.tutorialsListItem}>
-                        <a href="/tutorial-item/{post.slug}" className={styles.themeTitle}>{post.title}</a>
+                        <a href={`/tutorial-item/${post.slug}`} className={styles.themeTitle}>{post.title}</a>
                     </li>
                 ))
             }
-        </div>
+        </ul>
     )
 
 

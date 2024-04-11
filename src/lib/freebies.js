@@ -40,15 +40,15 @@ export async function getSinglePost(slug) {
             freebie(id: "${slug}", idType: SLUG) {
               slug
               title(format: RENDERED)
-              databaseId
+              content(format: RENDERED)
               progressionStudiosFileDownload
-                progressionStudiosSubTitle
-                featuredImage {
-                  node {
-                    srcSet(size: PROGRESSION_FREEBIES)
-                    sourceUrl(size: PROGRESSION_FREEBIES)
-                    sizes(size: PROGRESSION_FREEBIES)
-                  }
+              progressionStudiosSubTitle
+              featuredImage {
+                node {
+                  srcSet(size: PROGRESSION_FREEBIES)
+                  sourceUrl(size: PROGRESSION_FREEBIES)
+                  sizes(size: PROGRESSION_FREEBIES)
+                }
               }
               seo {
                 metaDesc
