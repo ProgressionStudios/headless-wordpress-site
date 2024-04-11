@@ -27,6 +27,9 @@ const Header = () => {
         };
     }, [handleKeyPress]);
 
+    const isCurrentFreebie = pathname === '/freebies' || pathname.startsWith('/freebie-item/');
+
+
     return (
         <header className={`${styles.header} ${isExpanded ? styles.expanded : ''}`}>
 
@@ -44,7 +47,7 @@ const Header = () => {
                     <ul>
                         <li><Link href="/" className={pathname == "/" ? styles.current : ""}>Home</Link></li>
                         <li><Link href="/portfolio" className={pathname == "/portfolio" ? styles.current : ""}>Themes</Link></li>
-                        <li><Link href="/freebies" className={pathname == "/freebies" ? styles.current : ""}>Freebies</Link></li>
+                        <li><Link href="/freebies" className={isCurrentFreebie ? styles.current : ""}>Freebies</Link></li>
                         <li><Link href="/tutorials" className={pathname == "/tutorials" ? styles.current : ""}>Tutorials</Link></li>
                         <li><Link href="/contact-us" className={pathname == "/contact-us" ? styles.current : ""}>Contact</Link></li>
                     </ul>

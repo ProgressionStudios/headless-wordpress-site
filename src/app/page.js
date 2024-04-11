@@ -6,10 +6,14 @@ import { getThemesList } from "../lib/themes";
 import OurServices from "../lib/home/OurServices";
 import ThemeList from "../components/ThemeList";
 
+import { getPostSlugs } from "../lib/freebies";
+
 import styles from "../styles/pages/page.module.css";
 
 export default async function Home() {
   const initialPosts = await getThemesList();
+  
+  
 
   return (
     <main className={styles.globalMain}>

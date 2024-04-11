@@ -1,8 +1,8 @@
 import graphqlRequest from "./graphqlRequest";
 
 export async function getPageSlugs() {
-    const query = {
-        query: `query getPageSlugs {
+  const query = {
+    query: `query getPageSlugs {
             pages {
               nodes {
                 slug
@@ -11,12 +11,18 @@ export async function getPageSlugs() {
               }
             }
           }`
-    };
+  };
 
+  try {
     const resJson = await graphqlRequest(query);
-    const slugs = resJson.data.pages.nodes;
-    return slugs;
+    return resJson.data.pages.nodes;
+  } catch (error) {
+    console.error("Error fetching page slugs:", error);
+    throw error; // Or return an appropriate fallback
+  }
 }
+
+
 
 export async function getPagesList() {
   const query = {
@@ -31,16 +37,21 @@ export async function getPagesList() {
           }`
   };
 
-  const resJson = await graphqlRequest(query);
-  const pages = resJson.data.pages.nodes;
-  return pages;
+  try {
+    const resJson = await graphqlRequest(query);
+    return resJson.data.pages.nodes;
+  } catch (error) {
+    console.error("Error fetching pages list:", error);
+    throw error; // Or return an appropriate fallback
+  }
 }
 
 
+
 export async function getSinglePage(slug) {
-    const query = {
-        query: `query getSinglePage {
-            pages(where: {name: "${slug}"}) {
+  const query = {
+    query: `query getSinglePage($slug: String!) {
+            pages(where: {name: $slug}) {
               nodes {
                 content(format: RENDERED)
                 date
@@ -65,10 +76,17 @@ export async function getSinglePage(slug) {
                 }
               }
             }
-          }`
-    };
+          }`,
+    variables: {
+      slug: slug
+    }
+  };
 
+  try {
     const resJson = await graphqlRequest(query);
-    const pageData = resJson.data.pages.nodes[0];
-    return pageData;
+    return resJson.data.pages.nodes[0]; // Assuming there's always at least one node
+  } catch (error) {
+    console.error("Error fetching single page:", error);
+    throw error; // Or return an appropriate fallback
+  }
 }
