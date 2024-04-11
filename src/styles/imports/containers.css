@@ -1,0 +1,36 @@
+.container {
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 var(--space-gutter);
+}
+
+.container-full {
+    max-width: 100%;
+    padding: 0 calc(var(--space-gutter) + 1.25rem);
+}
+
+.container-flex {
+    display: flex;
+}
+
+.content-with-sidebar {
+    margin-right: 40px;
+}
+
+.sidebar-container {
+    width: 350px;
+}
+
+@media only screen and (max-width: 767px) {
+    .container-flex {
+        flex-direction: column;
+    }
+
+    .content-with-sidebar {
+        margin-right: 0;
+    }
+
+    .sidebar-container {
+        width: 100%;
+    }
+}

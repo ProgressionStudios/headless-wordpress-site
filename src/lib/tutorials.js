@@ -1,4 +1,4 @@
-import graphqlRequest from "./graphqlRequest";
+import graphqlRequest from "./utilities/graphqlRequest";
 
 export async function getTutorialsList() {
     const query = {

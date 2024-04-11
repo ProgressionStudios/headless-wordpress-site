@@ -2,27 +2,27 @@ import { getSinglePage } from "../../lib/pages";
 import parse from 'html-react-parser';
 import seoStringParser from "../../lib/utilities/seoStringParser";
 import PageTitle from "../../components/PageTitle";
-import { getThemesList } from "../../lib/themes";
-import ThemeList from "../../components/ThemeList";
+import { getFreebiesList } from "../../lib/freebies";
+import FreebiesList from "../../components/FreebiesList";
 
 import styles from "../../styles/content/page.module.css";
 
 export default async function Page() {
-    const pageData = await getSinglePage('portfolio');
-    const initialPosts = await getThemesList();
+    const pageData = await getSinglePage('freebies');
+    const initialPosts = await getFreebiesList();
 
     return (
         <main className={styles.globalMain}>
             <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             <div className="container">
-                <ThemeList initialPosts={initialPosts} count={99} />
+                <FreebiesList initialPosts={initialPosts} count={99} />
             </div>
         </main>
     );
 }
 
 export async function generateMetadata() {
-    const seoData = await getSinglePage('portfolio');
+    const seoData = await getSinglePage('freebies');
 
     return {
         title: seoData.seo.title,

@@ -1,9 +1,9 @@
 import parse from 'html-react-parser';
-import seoStringParser from "../../lib/seoStringParser";
+import seoStringParser from "../../lib/utilities/seoStringParser";
 import { getPageSlugs, getSinglePage } from "../../lib/pages";
 import PageTitle from "../../components/PageTitle";
 
-import styles from "../../styles/pages/page.module.css";
+import styles from "../../styles/content/page.module.css";
 
 export async function generateStaticParams() {
     const pageSlugs = await getPageSlugs();

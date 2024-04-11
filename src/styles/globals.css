@@ -1,5 +1,7 @@
-@import url("layout/reset.css");
-@import url("layout/variables.css");
+@import url("imports/reset.css");
+@import url("imports/variables.css");
+@import url("imports/buttons.css");
+@import url("imports/containers.css");
 
 ::-moz-selection {
   background: var(--color-primary);
@@ -68,72 +70,6 @@ h1 {
   line-height: 1.15;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 80rem;
-  padding: 0 var(--space-gutter);
-}
-
-.container-full {
-  max-width: 100%;
-  padding: 0 calc(var(--space-gutter) + 1.25rem);
-}
-
-.xl-btn a.button {
-  font-size: calc(var(--font-size-small) + 0.05rem);
-}
-
-.button-center-grid {
-  text-align:center;
-  margin-top:var(--space-double);
-  margin-bottom: var(--space-default);
-}
-
-.button-center-grid a.button {
-  display: inline-block;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-a.button {
-  cursor: pointer;
-  border: none;
-  line-height: 1;
-  padding: 1.25rem 2.5rem;
-  border-radius: 3rem;
-  font-size: var(--font-size-small);
-  font-weight: var(--weight-semibold);
-  vertical-align: middle;
-  color: var(--color-base);
-  background: var(--color-primary);
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  transition:var(--transition);
-}
-
-a.button svg {
-  fill: var(--color-base);
-  display: inline;
-  width: 14px;
-  margin-left: var(--space-quarter);
-  transition: var(--transition);
-}
-
-a.button:hover {
-  background: var(--color-heading);
-  color: var(--color-base);
-}
-
-a.button:hover svg {
-  fill: var(--color-base);
-}
-
-.alt-btn a.button:hover {
-  color: var(--color-heading);
-  background: var(--color-base);
-}
-
 .heading-section-global {
   padding: var(--space-quad) 0 var(--space-double) 0;
   text-align:center;
@@ -168,22 +104,6 @@ a.button:hover svg {
   }
 }
 
-/* Hiding class, making content visible only to screen readers but not visually */
-/* "sr" meaning "screen-reader" */
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-header.expanded .menubtn {
-  background: red;
-}
-
 .error-page-container {
   text-align:center;
   max-width:680px;
@@ -195,29 +115,4 @@ header.expanded .menubtn {
   margin-bottom:var(--space-half);
   font-size:var(--font-size-base);
   text-transform:uppercase;
-}
-
-.container-flex {
-  display:flex;
-}
-
-.content-with-sidebar {
-  margin-right:40px;
-}
-
-.sidebar-container {
-  width:350px;
-}
-
-@media only screen and (max-width: 767px) {
-  .container-flex {
-    flex-direction: column;
-  }
-  .content-with-sidebar {
-      margin-right: 0;
-    }
-  
-  .sidebar-container {
-    width: 100%;
-  }
 }

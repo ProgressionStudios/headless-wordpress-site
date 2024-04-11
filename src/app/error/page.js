@@ -1,5 +1,5 @@
 import PageTitle from "../../components/PageTitle";
-import styles from "../../styles/pages/page.module.css";
+import styles from "../../styles/content/page.module.css";
 
 
 export default async function ErrorHome() {

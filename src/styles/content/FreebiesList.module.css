@@ -1,0 +1,48 @@
+.freebiesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 40px;
+}
+
+@media (max-width: 600px) {
+    .freebiesContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tutorialsListItem {
+    background: var(--color-base);
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.freebiesCard {
+    padding: 2rem;
+    padding-bottom: 1.88rem;
+    font-size:var(--font-size-small);
+}
+
+.freebiesCard h4 {
+    margin-bottom:var(--space-quarter);
+}
+
+.freebiesCard h4 a {
+    color:var(--color-heading);
+}
+
+.freebiesCard h4 a:hover {
+    color: var(--color-primary);
+}
+
+.themesImageLink {
+    overflow:hidden;
+    display:block;
+}
+
+.themesImageLink img {
+    width: 100%;
+    transition: var(--transition);
+}
+
+.themesImageLink:hover img {
+    transform: scale(1.07);
+}

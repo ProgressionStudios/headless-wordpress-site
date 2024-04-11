@@ -2,27 +2,27 @@ import { getSinglePage } from "../../lib/pages";
 import parse from 'html-react-parser';
 import seoStringParser from "../../lib/utilities/seoStringParser";
 import PageTitle from "../../components/PageTitle";
-import { getThemesList } from "../../lib/themes";
-import ThemeList from "../../components/ThemeList";
+import { getTutorialsList } from "../../lib/tutorials";
+import TutorialsList from "../../components/TutorialsList";
 
 import styles from "../../styles/content/page.module.css";
 
 export default async function Page() {
-    const pageData = await getSinglePage('portfolio');
-    const initialPosts = await getThemesList();
+    const pageData = await getSinglePage('tutorials');
+    const initialPosts = await getTutorialsList();
 
     return (
         <main className={styles.globalMain}>
             <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             <div className="container">
-                <ThemeList initialPosts={initialPosts} count={99} />
+                <TutorialsList initialPosts={initialPosts} count={6} />
             </div>
         </main>
     );
 }
 
 export async function generateMetadata() {
-    const seoData = await getSinglePage('portfolio');
+    const seoData = await getSinglePage('tutorials');
 
     return {
         title: seoData.seo.title,

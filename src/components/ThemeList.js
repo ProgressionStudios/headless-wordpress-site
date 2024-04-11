@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 
-import styles from '../styles/layout/ThemesList.module.css';
+import styles from '../styles/content/ThemesList.module.css';
 
 export default function ThemeList({ initialPosts, count }) {
 

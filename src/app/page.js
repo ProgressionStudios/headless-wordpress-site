@@ -1,20 +1,16 @@
 import { getSinglePage } from "../lib/pages";
 import parse from 'html-react-parser';
-import seoStringParser from "../lib/seoStringParser";
+import seoStringParser from "../lib/utilities/seoStringParser";
 import Link from 'next/link';
 import { getThemesList } from "../lib/themes";
 import OurServices from "../lib/home/OurServices";
 import ThemeList from "../components/ThemeList";
 
-import { getPostSlugs } from "../lib/freebies";
-
-import styles from "../styles/pages/page.module.css";
+import styles from "../styles/content/page.module.css";
 
 export default async function Home() {
   const initialPosts = await getThemesList();
   
-  
-
   return (
     <main className={styles.globalMain}>
       <div className={styles.hero}>

@@ -1,5 +1,5 @@
 import { getPostList } from "../../lib/posts";
-import PostList from "../../lib/PostList";
+import PostList from "../../components/PostList";
 
 export default async function BlogHome() {
 

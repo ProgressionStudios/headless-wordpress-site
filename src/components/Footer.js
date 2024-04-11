@@ -1,4 +1,4 @@
-import SubscribePage from '../lib/newslettersignup';
+import SubscribePage from '../lib/forms/newslettersignup';
 import Link from 'next/link';
 
 import styles from '../styles/layout/Footer.module.css';
