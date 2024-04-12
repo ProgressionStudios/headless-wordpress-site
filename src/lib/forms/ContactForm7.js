@@ -3,8 +3,11 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import Alert from './Alert';
 
+import styles from "../../styles/content/contact.module.css";
+
+
 //https://medium.com/@francescopassanante/how-to-send-a-form-with-contact-form-7-api-in-wp-headless-and-next-js-ad8936f65b9f
-export default function FormValidation() {
+export default function ContactForm() {
     const { register, handleSubmit, resetField, formState: { errors } } = useForm();
     const [message, setMessage] = useState('')
     const [dangerMessage, setDangerMessage] = useState('')
@@ -48,16 +51,21 @@ export default function FormValidation() {
     }
     return (
         <>
-            {dangerMessage && <Alert type="danger" heading="Error" message={dangerMessage} />}
-            {message && <Alert type="success" heading="OK" message={message} />}
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <div className={styles.contactHeading}>
+                <h4>Fill out the form below to get in touch.<br/>We respond to all inquires within 24 hours.</h4>
+            </div>
+            <div className={styles.success}>
+                {dangerMessage && <Alert type="danger" heading="Error" message={dangerMessage} />}
+                {message && <Alert type="success" heading="Success" message={message} />}
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
                 <input
                     className="form-control"
                     type="text"
                     placeholder="Your Name"
                     {...register("yourname", { required: true, maxLength: 80 })}
                 />
-                {errors.yourname && <p className="text-danger mt-1"><small>Your name is required</small></p>}
+                {errors.yourname && <p className="text-danger"><small>Your name is required</small></p>}
 
                 <input
                     className="form-control"
@@ -69,7 +77,7 @@ export default function FormValidation() {
                             pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                         })}
                 />
-                {errors.youremail && <p className="text-danger mt-1"><small>Please enter a valid e-mail address</small></p>}
+                {errors.youremail && <p className="text-danger"><small>Please enter a valid e-mail address</small></p>}
 
                 <input
                     className="form-control"
@@ -77,17 +85,17 @@ export default function FormValidation() {
                     placeholder="Subject"
                     {...register("yoursubject", { required: true, maxLength: 80 })}
                 />
-                {errors.yoursubject && <p className="text-danger mt-1"><small>A subject is required</small></p>}
+                {errors.yoursubject && <p className="text-danger"><small>A subject is required</small></p>}
 
                 <textarea
                     className="form-control"
-                    rows="5"
+                    rows="7"
                     placeholder="Message"
                     {...register("yourmessage", {
                         required: false
                     })}
                 ></textarea>
-                <button type='submit' className="" disabled={isSending}>{isSending && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>} Submit</button>
+                <button type='submit' className="button" disabled={isSending}>{isSending && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>} Submit Message</button>
             </form>
         </>
     )

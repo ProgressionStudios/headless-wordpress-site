@@ -2,20 +2,17 @@ import { getSinglePage } from "../../lib/pages";
 import parse from 'html-react-parser';
 import seoStringParser from "../../lib/utilities/seoStringParser";
 import PageTitle from "../../components/PageTitle";
-import FormValidation from "../../lib/forms/ContactForm7";
-
-import styles from "../../styles/content/page.module.css";
+import ContactForm from "../../lib/forms/ContactForm7";
 
 
 export default async function Page() {
     const pageData = await getSinglePage('contact-us');
 
     return (
-        <main className={styles.globalMain}>
+        <main className="globalMain">
             <PageTitle titleField={pageData.title} subField={pageData.progressionStudiosSubTitle} featuredimg={pageData.featuredImage?.node?.mediaItemUrl ?? ''} />
             <div className="container">
-                <h2>Contact form here</h2>
-                <FormValidation />
+                <ContactForm />
             </div>
         </main>
     );

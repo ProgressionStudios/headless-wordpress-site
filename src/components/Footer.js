@@ -9,12 +9,12 @@ function Footer() {
             <div className={styles.newsletter}>
                 <div className="container">
                     <div className={styles.newsleterFlex}>
-                        <div>
+                        <div className={styles.newsletterHeadings}>
                             <h3>Newsletter</h3>
                             <h4>Get notified when new themes are released!</h4>
                         </div>
                         <div className={styles.newsletterForm}>
-                            
+                            <SubscribePage />
                         </div>
                     </div>
                 </div>

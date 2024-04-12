@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from 'react';
 
+import styles from "../../styles/content/newsletter.module.css";
+
 export default function SubscribePage() {
     const [email, setEmail] = useState(''); // Step 2: Initialize state variable for email
 
@@ -10,7 +12,7 @@ export default function SubscribePage() {
     };
 
     return (
-        <div id="mc_embed_shell">
+        <div className={styles.embedForm}>
             <div id="mc_embed_signup">
                 <form action="https://progressionstudios.us1.list-manage.com/subscribe/post?u=1a06aa3bca8613232881e8a6e&amp;id=2f5a556941&amp;f_id=0068f9e5f0"
                     method="post"
@@ -21,8 +23,17 @@ export default function SubscribePage() {
                     noValidate>
                     <div id="mc_embed_signup_scroll">
                         <div className="mc-field-group">
-                            <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" placeHolder="Enter your email address"
-                                required value={email} onChange={handleEmailChange} />
+                            <input
+                                type="email"
+                                name="EMAIL"
+                                className="required email"
+                                id="mce-EMAIL"
+                                placeholder="Enter your email address"
+                                required
+                                value={email}
+                                onChange={handleEmailChange}
+                            />
+
                         </div>
                         <div id="mce-responses" className="clear foot">
                             <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
@@ -33,7 +44,7 @@ export default function SubscribePage() {
                         </div>
                         <div className="optionalParent">
                             <div className="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" className="button" value="Go" />
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" className={styles.submit} value="Go" />
                             </div>
                         </div>
                     </div>

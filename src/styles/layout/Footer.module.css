@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.newsleterFlex div {
+.newsletterHeadings {
     display: flex;
     align-items: center;
 }
@@ -29,6 +29,27 @@
     font-size:1.125rem;
     margin-top:4px;
     margin-left:var(--space-half);
+}
+
+@media only screen and (max-width: 1024px) {
+.newsletterHeadings {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter h4 {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .newsleterFlex {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .newsletter h4 {
+        margin-bottom:var(--space-default);
+    }
 }
 
 footer.footer {
