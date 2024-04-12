@@ -58,6 +58,28 @@ h4 {
 
 h3 {
   font-size: var(--font-size-large);
+  margin-bottom:var(--space-half);
+}
+
+p {
+  margin-bottom:var(--space-default);
+}
+
+hr {
+  background-color:var(--color-light-grey);;
+  height: 2px;
+  border: 0;
+  margin-bottom: var(--space-default);
+}
+
+pre {
+  margin-bottom: var(--space-default);
+  overflow-x: auto;
+  font-family: Courier, monospace;
+  background:var(--color-light-grey);
+  color:var(--color-heading);
+  padding:var(--space-half);
+  border-radius:6px;
 }
 
 h2 {

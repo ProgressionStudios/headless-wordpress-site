@@ -28,6 +28,7 @@ const Header = () => {
     }, [handleKeyPress]);
 
     const isCurrentFreebie = pathname === '/freebies' || pathname.startsWith('/freebie-item/');
+    const isCurrentTutorial = pathname === '/tutorials' || pathname.startsWith('/tutorial-item/');
 
 
     return (
@@ -48,7 +49,7 @@ const Header = () => {
                         <li><Link href="/" className={pathname == "/" ? styles.current : ""}>Home</Link></li>
                         <li><Link href="/portfolio" className={pathname == "/portfolio" ? styles.current : ""}>Themes</Link></li>
                         <li><Link href="/freebies" className={isCurrentFreebie ? styles.current : ""}>Freebies</Link></li>
-                        <li><Link href="/tutorials" className={pathname == "/tutorials" ? styles.current : ""}>Tutorials</Link></li>
+                        <li><Link href="/tutorials" className={isCurrentTutorial ? styles.current : ""}>Tutorials</Link></li>
                         <li><Link href="/contact-us" className={pathname == "/contact-us" ? styles.current : ""}>Contact</Link></li>
                     </ul>
                 </nav>

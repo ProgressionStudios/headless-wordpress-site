@@ -1,0 +1,37 @@
+h1.pageHeading {
+    margin-bottom:var(--space-default);
+    padding-bottom:var(--space-gutter);
+    border-bottom:2px solid var(--color-light-grey);
+    font-size: clamp(1.5rem, 0.875rem + 2vw, 2rem);
+}
+
+.back {
+    text-align:center;
+    padding-top: var(--space-default);
+}
+
+.tutorialsSingle ol,
+.tutorialsSingle ul {
+    margin-left:20px;
+    margin-bottom: var(--space-gutter);
+}
+
+.tutorialsSingle iframe {
+    aspect-ratio: 16 / 9;
+    height: unset;
+    width: 100%;
+}
+
+.tutorialsSingle h1,
+.tutorialsSingle h2,
+.tutorialsSingle h3,
+.tutorialsSingle h4,
+.tutorialsSingle h5, 
+.tutorialsSingle h6 {
+        margin-bottom: var(--space-half);
+}
+
+.tutorialsSingle ol li,
+.tutorialsSingle ul li {
+    margin-bottom: var(--space-quarter);
+}

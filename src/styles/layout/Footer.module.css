@@ -20,6 +20,7 @@
     font-size:1.875rem;
     color: var(--color-base);
     font-weight:var(--weight-extrabold);
+    margin:0;
 }
 
 .newsletter h4 {

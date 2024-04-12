@@ -3,11 +3,18 @@ import graphqlRequest from "./utilities/graphqlRequest";
 export async function getTutorialsList() {
     const query = {
         query: `query getAllTutorials {
-            tutorials(first: 500) {
+            tutorials(first: 100) {
               nodes {
                 slug
                 title
                 id
+                tutorialCategories {
+                  edges {
+                    node {
+                      slug
+                    }
+                  }
+                }
               }
             }
           }`
@@ -24,3 +31,38 @@ export async function getTutorialsList() {
     }
 }
 
+export async function getSinglePost(slug) {
+  const query = {
+    query: `query getSinglePost {
+            tutorial(id: "${slug}", idType: SLUG) {
+              slug
+              title(format: RENDERED)
+              content(format: RENDERED)
+              seo {
+                metaDesc
+              }
+            }
+          }`
+  };
+
+  const resJson = await graphqlRequest(query);
+  const singlePost = resJson.data.tutorial;
+
+  return singlePost;
+}
+
+export async function getPostSlugs() {
+  const query = {
+    query: `query getPostSlugs {
+            tutorials(first: 100) {
+              nodes {
+                slug
+              }
+            }
+          }`
+  };
+
+  const resJson = await graphqlRequest(query);
+  const slugs = resJson.data.tutorials.nodes;
+  return slugs;
+}

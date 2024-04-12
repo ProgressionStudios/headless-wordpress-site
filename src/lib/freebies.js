@@ -66,7 +66,7 @@ export async function getSinglePost(slug) {
 export async function getPostSlugs() {
   const query = {
     query: `query getPostSlugs {
-            freebies {
+            freebies(first: 500) {
               nodes {
                 slug
               }
