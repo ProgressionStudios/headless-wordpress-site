@@ -24,6 +24,19 @@ export default async function Home() {
         <video className={styles.videoBG} playsInline muted autoPlay loop>
           <source src="./video/video.mp4" type="video/mp4" />
         </video>
+          <img
+            src="./images/mobile-hero.webp"
+            alt="Elite Author"
+            decoding="async"
+            loading="lazy"
+            width="800"
+            height="500"
+            rel="preload" 
+            fetchpriority="high"
+            type="image/webp"
+            as="image"
+            className={styles.heroMobile}
+          />
         <div className={styles.heroOverlay}></div>
       </div>
       <OurServices />
@@ -35,6 +48,8 @@ export default async function Home() {
               alt="Elite Author"
               decoding="async"
               loading="lazy"
+              width="125"
+              height="124"
             />
             <div>
               <h2>$2+ Million in Sales on ThemeForest</h2>

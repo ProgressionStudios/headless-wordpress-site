@@ -4,7 +4,7 @@
 .embedForm input {
     background: var(--color-base);
     width: 260px;
-    padding: 10px 20px 7px 20px;
+    padding: 12px 20px 9px 20px;
     border-radius: 30px;
     border: 2px solid var(--color-base);
     font-size:var(--font-size-small);
@@ -18,7 +18,7 @@
     right: -1px;
     font-size: var(--font-size-small);
     font-weight: var(--weight-bold);
-    height: 44px;
+    height: 48px;
     width: auto;
     padding-left: 15px;
     padding-right: 15px;
