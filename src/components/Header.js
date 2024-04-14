@@ -71,10 +71,10 @@ const Header = () => {
                     <nav className={styles.mobileNav} aria-label="Mobile Navigation" role="navigation">
                         <ul onClick={() => isExpanded && setIsExpanded(false)}>
                             <li><Link href="/" className={pathname == "/" ? styles.current : ""}>Home</Link></li>
-                            <li><Link href="/portfolio" className={pathname == "/portfolio" ? styles.current : ""}>Themes</Link></li>
-                            <li><Link href="/freebies" className={pathname == "/freebies" ? styles.current : ""}>Freebies</Link></li>
-                            <li><Link href="/tutorials" className={pathname == "/tutorials" ? styles.current : ""}>Tutorials</Link></li>
-                            <li><Link href="/contact-us" className={pathname == "/contact-us" ? styles.current : ""}>Contact</Link></li>
+                            <li><Link href="/portfolio/" className={pathname == "/portfolio/" ? styles.current : ""}>Themes</Link></li>
+                            <li><Link href="/freebies/" className={isCurrentFreebie ? styles.current : ""}>Freebies</Link></li>
+                            <li><Link href="/tutorials/" className={isCurrentTutorial ? styles.current : ""}>Tutorials</Link></li>
+                            <li><Link href="/contact-us/" className={pathname == "/contact-us/" ? styles.current : ""}>Contact</Link></li>
                         </ul>
                         <div className={styles.social}>
                             <a href="https://twitter.com/progression_s" target="_blank">
