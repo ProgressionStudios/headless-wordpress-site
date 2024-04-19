@@ -23,6 +23,7 @@ export default function SubscribePage() {
                     noValidate>
                     <div id="mc_embed_signup_scroll">
                         <div className="mc-field-group">
+                            <label htmlFor="mce-EMAIL" className={styles.emailLabel}>Email Address</label>
                             <input
                                 type="email"
                                 name="EMAIL"
@@ -40,7 +41,8 @@ export default function SubscribePage() {
                             <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
                         </div>
                         <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-                            <input type="text" name="b_1a06aa3bca8613232881e8a6e_2f5a556941" tabIndex="-1" value="" />
+                            <label htmlFor="mce-hidden">Hidden</label>
+                            <input type="text" id="mce-hidden" name="b_1a06aa3bca8613232881e8a6e_2f5a556941" tabIndex="-1" value="" />
                         </div>
                         <div className="optionalParent">
                             <div className="clear foot">

@@ -2,7 +2,7 @@
 
 This is a Headless WordPress site powered by [Next.js](https://nextjs.org/). Content and media are fetched from a WordPress installation using WPGraphQL. Using a headless setup enhanced my ability to manage accessibility and improve page loading speeds.
 
-[View Website - ProgressionStudios.com](https://progressionstudios/)
+[View Website - ProgressionStudios.com](https://progressionstudios.com/)
 
 ## Tools Used
 - [WordPress](https://wordpress.org)

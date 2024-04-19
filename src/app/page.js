@@ -26,13 +26,13 @@ export default async function Home() {
         </video>
           <img
             src="./images/mobile-hero.webp"
-            alt="Elite Author"
+            alt="WordPress Experts"
             decoding="async"
             loading="lazy"
             width="800"
             height="500"
             rel="preload" 
-            fetchpriority="high"
+            fetchPriority="high"
             type="image/webp"
             as="image"
             className={styles.heroMobile}
