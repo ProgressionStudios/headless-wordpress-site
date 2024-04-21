@@ -76,7 +76,7 @@ export async function generateMetadata() {
             type: 'website',
         },
         icons: {
-            icon: './fav.webp',
+            icon: '/fav.webp',
         },
         twitter: {
             title: seoData.seo.title,
