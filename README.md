@@ -12,9 +12,9 @@ This is a Headless WordPress site powered by [Next.js](https://nextjs.org/). Con
 - [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 
 ## Google PageSpeed Insights
-![Desktop Page Scores](https://progressionstudios.com/headless/wp-content/uploads/2024/04/desktop-scores.jpg)
+![Desktop Page Scores](https://progressionstudios.com/headless/wp-content/uploads/2024/04/performance-screeneshot.jpg)
 
-[Mobile Scores](https://progressionstudios.com/headless/wp-content/uploads/2024/04/mobile-google-insights.pdf) | [Desktop Scores](https://progressionstudios.com/headless/wp-content/uploads/2024/04/desktop-google-insights.pdf)
+[Mobile Scores](https://progressionstudios.com/headless/wp-content/uploads/2024/04/mobile.pdf) | [Desktop Scores](https://progressionstudios.com/headless/wp-content/uploads/2024/04/desktop.pdf)
 
 ## Getting Started
 
