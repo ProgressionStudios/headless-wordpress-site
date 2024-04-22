@@ -27,7 +27,7 @@ export default function ContactForm() {
         // If form_id is a static value or obtained differently, adjust accordingly.
         form_data.append("_wpcf7_unit_tag", data.form_id);
 
-        fetch("https://progressionstudios.com/headless/wp-json/contact-form-7/v1/contact-forms/15462/feedback", {
+        fetch(`${process.env.NEXT_PUBLIC_CONTACT_URL}`, {
             method: 'POST',
             body: form_data
         })
@@ -52,7 +52,8 @@ export default function ContactForm() {
     return (
         <>
             <div className={styles.contactHeading}>
-                <h4>Fill out the form below to get in touch.<br/>We respond to all inquires within 24 hours.</h4>
+                <h3>Let&apos;s get in touch</h3>
+                <h4>Fill out the form below to get in touch. We respond to all inquires within 24 hours.</h4>
             </div>
             <div className={styles.success}>
                 {dangerMessage && <Alert type="danger" heading="Error" message={dangerMessage} />}
