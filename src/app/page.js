@@ -22,10 +22,10 @@ export default async function Home() {
           </div>
         </div>
         <video className={styles.videoBG} playsInline muted autoPlay loop>
-          <source src="./video/video.mp4" type="video/mp4" />
+          <source src="/video/video.mp4" type="video/mp4" />
         </video>
           <img
-            src="./images/mobile-hero.webp"
+            src="/images/mobile-hero.webp"
             alt="WordPress Experts"
             decoding="async"
             loading="lazy"
@@ -44,7 +44,7 @@ export default async function Home() {
         <div className="container">
           <div className={styles.eliteGrid}>
             <img
-              src="./images/elitelogo.webp"
+              src="/images/elitelogo.webp"
               alt="Elite Author"
               decoding="async"
               loading="lazy"
@@ -90,7 +90,7 @@ export async function generateMetadata() {
       type: 'website',
     },
     icons: {
-      icon: './fav.webp',
+      icon: '/fav.webp',
     },
     twitter: {
       title: seoData.seo.title,
