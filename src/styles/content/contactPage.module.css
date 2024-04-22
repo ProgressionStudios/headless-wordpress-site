@@ -1,0 +1,34 @@
+.containerContact {
+    display:flex;
+    margin:-4.375rem 0;
+    align-items: center;
+}
+
+.googleMap {
+    width:50%;
+    height:800px;
+}
+
+.contactContainer {
+    padding:0 var(--space-double);
+}
+
+@media only screen and (max-width: 1024px) {
+    .contactContainer {
+        padding: 0 var(--space-default);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .googleMap {
+        width:100%;
+        height: 500px;
+        margin-bottom: var(--space-double);
+    }
+
+    .containerContact {
+        flex-direction: column;
+        margin-bottom: var(--space-double);
+     }
+
+}

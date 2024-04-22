@@ -1,7 +1,9 @@
 .contactHeading {
-    max-width: 700px;
     margin: 0 auto var(--space-double) auto;
-    text-align:center;
+}
+
+.contactHeading h3 {
+    font-size: clamp(1.3rem, 0.7375rem + 1.8vw, 1.75rem);
 }
 
 .success {
@@ -12,6 +14,7 @@
 .contactHeading h4 {
     color:var(--color-main);
     font-weight: var(--weight-light);
+    font-size:var(--font-size-bas);
 }
 
 form.contactForm {
