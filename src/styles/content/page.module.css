@@ -124,3 +124,46 @@ h2.heroSubtitle {
         padding: 5rem 0;
     }
 }
+
+
+.aboutContainer {
+    display: flex;
+    padding-top:var(--space-default);
+    max-width:900px;
+    margin:0 auto;
+    align-items: center;
+}
+
+.aboutImage {
+    width: 40%;
+}
+
+.aboutText {
+    width:60%;
+    padding: var(--space-quad) 0 var(--space-half) 0;
+}
+
+.aboutText h2 {
+    font-size: clamp(2rem, 1.375rem + 2vw, 2.5rem);
+    margin-bottom: var(--space-half);
+}
+
+.aboutText h3 {
+    font-size: clamp(1rem, 0.625rem + 1.2vw, 1.3rem);
+    font-weight: var(--weight-light);
+    color: var(--color-main);
+    margin-bottom: var(--space-gutter);
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutContainer {
+        flex-direction: column;
+    }
+    .aboutText, .aboutImage {
+        width:auto;
+    }
+
+    .aboutImage img {
+        max-width:400px;
+    }
+}
